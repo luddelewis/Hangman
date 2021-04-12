@@ -58,12 +58,14 @@ namespace Hangman
             this.button27 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(350, 350);
+            this.button1.Location = new System.Drawing.Point(367, 375);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 0;
@@ -74,7 +76,7 @@ namespace Hangman
             // button2
             // 
             this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(350, 406);
+            this.button2.Location = new System.Drawing.Point(367, 431);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
             this.button2.TabIndex = 1;
@@ -85,7 +87,7 @@ namespace Hangman
             // button3
             // 
             this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(350, 462);
+            this.button3.Location = new System.Drawing.Point(367, 487);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 50);
             this.button3.TabIndex = 2;
@@ -96,7 +98,7 @@ namespace Hangman
             // button4
             // 
             this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(406, 462);
+            this.button4.Location = new System.Drawing.Point(423, 487);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 50);
             this.button4.TabIndex = 5;
@@ -107,7 +109,7 @@ namespace Hangman
             // button5
             // 
             this.button5.Enabled = false;
-            this.button5.Location = new System.Drawing.Point(406, 406);
+            this.button5.Location = new System.Drawing.Point(423, 431);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(50, 50);
             this.button5.TabIndex = 4;
@@ -118,7 +120,7 @@ namespace Hangman
             // button6
             // 
             this.button6.Enabled = false;
-            this.button6.Location = new System.Drawing.Point(406, 350);
+            this.button6.Location = new System.Drawing.Point(423, 375);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(50, 50);
             this.button6.TabIndex = 3;
@@ -129,7 +131,7 @@ namespace Hangman
             // button7
             // 
             this.button7.Enabled = false;
-            this.button7.Location = new System.Drawing.Point(462, 462);
+            this.button7.Location = new System.Drawing.Point(479, 487);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(50, 50);
             this.button7.TabIndex = 8;
@@ -140,7 +142,7 @@ namespace Hangman
             // button8
             // 
             this.button8.Enabled = false;
-            this.button8.Location = new System.Drawing.Point(462, 406);
+            this.button8.Location = new System.Drawing.Point(479, 431);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(50, 50);
             this.button8.TabIndex = 7;
@@ -151,7 +153,7 @@ namespace Hangman
             // button9
             // 
             this.button9.Enabled = false;
-            this.button9.Location = new System.Drawing.Point(462, 350);
+            this.button9.Location = new System.Drawing.Point(479, 375);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(50, 50);
             this.button9.TabIndex = 6;
@@ -162,7 +164,7 @@ namespace Hangman
             // button10
             // 
             this.button10.Enabled = false;
-            this.button10.Location = new System.Drawing.Point(518, 462);
+            this.button10.Location = new System.Drawing.Point(535, 487);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 11;
@@ -173,7 +175,7 @@ namespace Hangman
             // button11
             // 
             this.button11.Enabled = false;
-            this.button11.Location = new System.Drawing.Point(518, 406);
+            this.button11.Location = new System.Drawing.Point(535, 431);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(50, 50);
             this.button11.TabIndex = 10;
@@ -184,7 +186,7 @@ namespace Hangman
             // button12
             // 
             this.button12.Enabled = false;
-            this.button12.Location = new System.Drawing.Point(518, 350);
+            this.button12.Location = new System.Drawing.Point(535, 375);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(50, 50);
             this.button12.TabIndex = 9;
@@ -195,7 +197,7 @@ namespace Hangman
             // button13
             // 
             this.button13.Enabled = false;
-            this.button13.Location = new System.Drawing.Point(294, 462);
+            this.button13.Location = new System.Drawing.Point(311, 487);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(50, 50);
             this.button13.TabIndex = 20;
@@ -206,7 +208,7 @@ namespace Hangman
             // button14
             // 
             this.button14.Enabled = false;
-            this.button14.Location = new System.Drawing.Point(294, 406);
+            this.button14.Location = new System.Drawing.Point(311, 431);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(50, 50);
             this.button14.TabIndex = 19;
@@ -217,7 +219,7 @@ namespace Hangman
             // button15
             // 
             this.button15.Enabled = false;
-            this.button15.Location = new System.Drawing.Point(294, 350);
+            this.button15.Location = new System.Drawing.Point(311, 375);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(50, 50);
             this.button15.TabIndex = 18;
@@ -228,7 +230,7 @@ namespace Hangman
             // button16
             // 
             this.button16.Enabled = false;
-            this.button16.Location = new System.Drawing.Point(238, 462);
+            this.button16.Location = new System.Drawing.Point(255, 487);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(50, 50);
             this.button16.TabIndex = 17;
@@ -239,7 +241,7 @@ namespace Hangman
             // button17
             // 
             this.button17.Enabled = false;
-            this.button17.Location = new System.Drawing.Point(238, 406);
+            this.button17.Location = new System.Drawing.Point(255, 431);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(50, 50);
             this.button17.TabIndex = 16;
@@ -250,7 +252,7 @@ namespace Hangman
             // button18
             // 
             this.button18.Enabled = false;
-            this.button18.Location = new System.Drawing.Point(238, 350);
+            this.button18.Location = new System.Drawing.Point(255, 375);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(50, 50);
             this.button18.TabIndex = 15;
@@ -261,7 +263,7 @@ namespace Hangman
             // button19
             // 
             this.button19.Enabled = false;
-            this.button19.Location = new System.Drawing.Point(182, 462);
+            this.button19.Location = new System.Drawing.Point(199, 487);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(50, 50);
             this.button19.TabIndex = 14;
@@ -272,7 +274,7 @@ namespace Hangman
             // button20
             // 
             this.button20.Enabled = false;
-            this.button20.Location = new System.Drawing.Point(182, 406);
+            this.button20.Location = new System.Drawing.Point(199, 431);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(50, 50);
             this.button20.TabIndex = 13;
@@ -283,7 +285,7 @@ namespace Hangman
             // button21
             // 
             this.button21.Enabled = false;
-            this.button21.Location = new System.Drawing.Point(182, 350);
+            this.button21.Location = new System.Drawing.Point(199, 375);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(50, 50);
             this.button21.TabIndex = 12;
@@ -294,7 +296,7 @@ namespace Hangman
             // button22
             // 
             this.button22.Enabled = false;
-            this.button22.Location = new System.Drawing.Point(630, 406);
+            this.button22.Location = new System.Drawing.Point(647, 431);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(50, 50);
             this.button22.TabIndex = 24;
@@ -305,7 +307,7 @@ namespace Hangman
             // button23
             // 
             this.button23.Enabled = false;
-            this.button23.Location = new System.Drawing.Point(630, 350);
+            this.button23.Location = new System.Drawing.Point(647, 375);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(50, 50);
             this.button23.TabIndex = 23;
@@ -316,7 +318,7 @@ namespace Hangman
             // button24
             // 
             this.button24.Enabled = false;
-            this.button24.Location = new System.Drawing.Point(574, 406);
+            this.button24.Location = new System.Drawing.Point(591, 431);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(50, 50);
             this.button24.TabIndex = 22;
@@ -327,7 +329,7 @@ namespace Hangman
             // button25
             // 
             this.button25.Enabled = false;
-            this.button25.Location = new System.Drawing.Point(574, 350);
+            this.button25.Location = new System.Drawing.Point(591, 375);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(50, 50);
             this.button25.TabIndex = 21;
@@ -338,7 +340,7 @@ namespace Hangman
             // button26
             // 
             this.button26.Enabled = false;
-            this.button26.Location = new System.Drawing.Point(126, 406);
+            this.button26.Location = new System.Drawing.Point(143, 431);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(50, 50);
             this.button26.TabIndex = 28;
@@ -349,7 +351,7 @@ namespace Hangman
             // button27
             // 
             this.button27.Enabled = false;
-            this.button27.Location = new System.Drawing.Point(126, 350);
+            this.button27.Location = new System.Drawing.Point(143, 375);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(50, 50);
             this.button27.TabIndex = 27;
@@ -360,7 +362,7 @@ namespace Hangman
             // button28
             // 
             this.button28.Enabled = false;
-            this.button28.Location = new System.Drawing.Point(70, 406);
+            this.button28.Location = new System.Drawing.Point(87, 431);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(50, 50);
             this.button28.TabIndex = 26;
@@ -371,7 +373,7 @@ namespace Hangman
             // button29
             // 
             this.button29.Enabled = false;
-            this.button29.Location = new System.Drawing.Point(70, 350);
+            this.button29.Location = new System.Drawing.Point(87, 375);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(50, 50);
             this.button29.TabIndex = 25;
@@ -379,11 +381,21 @@ namespace Hangman
             this.button29.UseVisualStyleBackColor = true;
             this.button29.Click += new System.EventHandler(this.letter_button);
             // 
+            // pictureBox
+            // 
+            this.pictureBox.Image = global::Hangman.Properties.Resources._8;
+            this.pictureBox.Location = new System.Drawing.Point(87, 33);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(610, 278);
+            this.pictureBox.TabIndex = 29;
+            this.pictureBox.TabStop = false;
+            // 
             // Hangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.button26);
             this.Controls.Add(this.button27);
             this.Controls.Add(this.button28);
@@ -418,6 +430,7 @@ namespace Hangman
             this.Name = "Hangman";
             this.Text = "Hangman";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Hangman_KeyPress);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -453,6 +466,7 @@ namespace Hangman
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }
 

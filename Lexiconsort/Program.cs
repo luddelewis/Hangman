@@ -11,7 +11,7 @@ namespace Lexiconsort
     {
         static void Main(string[] args)
         {
-            //This program was used to find out info about the lexicon inorder to set the difficulties and also to sort the lexicon by word length
+            //This program was used to find out info about the lexicon for hangman inorder to set the difficulties and also to sort the lexicon by word length
             bool saveIndex4 = true;
             bool saveIndex6 = true;
             int indexOf4 = 0;
@@ -19,14 +19,14 @@ namespace Lexiconsort
             //Reads the rawLexicon from a textfile in the project
             List<string> rawLexicon = File.ReadAllLines("../../RawHanglexicon.txt", Encoding.Default).ToList();
             List<string> cookedLexicon = new List<string>();
-            // Uses the OrderBy method to sort the words in ascending order
+            // Uses the OrderBy method to sort the words in rawLexicon in ascending order in cookedLexicon
             cookedLexicon = rawLexicon.OrderBy(word => word.Length).ToList();
             //Writes the now sorted lexicon into a txt file
             File.WriteAllLines("../../CookedHanglexicon.txt", cookedLexicon.ToArray());
             for(int i = 0; i <rawLexicon.ToArray().Length;i++)
             {
                 Console.WriteLine(cookedLexicon[i]);
-                //if cases for saving the index of the first word with 4 or 6 letters
+                //if cases for saving the index of the first word with 4 or 6 letters in cookedLexicon
                 if(rawLexicon[i].Length==4 && saveIndex4)
                 {
                     indexOf4 = i;

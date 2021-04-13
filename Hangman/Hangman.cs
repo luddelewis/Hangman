@@ -12,28 +12,28 @@ namespace Hangman
 {
     public partial class Hangman : Form
     {
+        public char pressedKey;
         public Hangman()
         {
             InitializeComponent();
         }
-
-        private void letter_button(object sender, EventArgs e)
-        {
-           
-        }
-
-
         private void Hangman_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char pressedKey = Char.ToUpper(e.KeyChar);
-            if (Char.IsLetter(pressedKey))
+            pressedKey = char.ToUpper(e.KeyChar);
+            if (char.IsLetter(pressedKey))
             {
-
+                LetterChecker();
             }
-            else
-            {
+        }
+        private void LetterClick(object sender, EventArgs e)
+        {
+            pressedKey = char.Parse(((Button)sender).Text);
+            ((Button)sender).Hide();
+            LetterChecker();
+        }
+        private void LetterChecker()
+        {
 
-            }
         }
     }
 }

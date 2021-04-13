@@ -14,9 +14,11 @@ namespace Lexiconsort
             //This program was used to find out info about the lexicon for hangman inorder to set the difficulties and also to sort the lexicon by word length
             bool saveIndex4 = true;
             bool saveIndex6 = true;
+            bool saveIndex8 = true;
             int indexOf4 = 0;
             int indexOf6 = 0;
-            //Reads the rawLexicon from a textfile in the project
+            int indexOf8 = 0;
+            //Reads the rawLexicon from a textfile in the project files
             List<string> rawLexicon = File.ReadAllLines("../../RawHanglexicon.txt", Encoding.Default).ToList();
             List<string> cookedLexicon = new List<string>();
             // Uses the OrderBy method to sort the words in rawLexicon in ascending order in cookedLexicon
@@ -37,6 +39,12 @@ namespace Lexiconsort
                     indexOf6 = i;
                     saveIndex6 = false;
                 }
+                if (cookedLexicon[i].Length == 8 && saveIndex8)
+                {
+                    indexOf8 = i;
+                    saveIndex8 = false;
+                }
+
 
             }
             //Printing out the info for the difficulties
@@ -45,6 +53,8 @@ namespace Lexiconsort
             Console.WriteLine("The 264th word had " + cookedLexicon[264].Length + " letters");
             Console.WriteLine("The 4 letter words begin at:" + indexOf4);
             Console.WriteLine("The 6 letter words begin at:" + indexOf6);
+            Console.WriteLine("The 8 letter words begin at:" + indexOf8);
+
             Console.ReadLine();
 
 

@@ -12,28 +12,45 @@ namespace Hangman
 {
     public partial class Hangman : Form
     {
-        public char pressedKey;
+        public string difficulty;
+        public int lives;
         public Hangman()
         {
             InitializeComponent();
         }
         private void Hangman_KeyPress(object sender, KeyPressEventArgs e)
         {
+            wBtn.Hide();
+            char pressedKey;
             pressedKey = char.ToUpper(e.KeyChar);
             if (char.IsLetter(pressedKey))
             {
-                LetterChecker();
+                LetterChecker(pressedKey);
             }
+
         }
         private void LetterClick(object sender, EventArgs e)
         {
-            pressedKey = char.Parse(((Button)sender).Text);
             ((Button)sender).Hide();
-            LetterChecker();
+            LetterChecker(char.Parse(((Button)sender).Text));
         }
-        private void LetterChecker()
+        private void Startup()
+        {
+            lives = 7;
+            menuPanel.Visible = true;
+
+        }
+        private void LetterChecker(char letter)
         {
 
         }
+
+        private void diffBtn_Click(object sender, EventArgs e)
+        {
+            difficulty = ((Button)sender).Text;
+            menuPanel.Hide();
+        }
+
+        
     }
 }

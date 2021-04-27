@@ -10,21 +10,22 @@ namespace Hangman
 
     class WordGenerator
     {
+        //Picks 3 random words from the file CookedHanglexicon based on their length.
         private string WordPicker(string difficulty) 
         {
-            Random rand = new Random();
+            Random randomNumber = new Random();
             string word = "";
             List<string> lexicon = File.ReadAllLines("../../../LexiconSort/CookedHanglexicon.txt").ToList();
             switch (difficulty)
             {
-                case "easy":
-                    word = lexicon[rand.Next(0, 540)];
+                case "hard":
+                    word = lexicon[randomNumber.Next(0, 540)];
                     break;
                 case "medium":
-                    word = lexicon[rand.Next(540, 748)];
+                    word = lexicon[randomNumber.Next(540, 748)];
                     break;
-                        case "hard":
-                    word = lexicon[rand.Next(748, 849)];
+                case "easy":
+                    word = lexicon[randomNumber.Next(748, 849)];
                     break;  
             }
             return word;

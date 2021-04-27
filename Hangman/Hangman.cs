@@ -14,6 +14,8 @@ namespace Hangman
     {
         public string difficulty;
         public int lives;
+        public string word;
+        
         public Hangman()
         {
             InitializeComponent();
@@ -36,18 +38,37 @@ namespace Hangman
         }
         private void Startup()
         {
+            WordGenerator getWord = new WordGenerator();
             lives = 7;
-            menuPanel.Visible = true;
-
+            switch (difficulty)
+            {
+                case "easy":
+                    word = getWord.easyWord;
+                    break;
+                case "medium":
+                    word = getWord.mediumWord;
+                    break;
+                case "hard":
+                    word = getWord.hardWord;
+                    break;
+            }
         }
         private void LetterChecker(char letter)
         {
+            if (word.Contains(letter))
+            {
 
+            }
+            else
+            {
+                lives--;
+            }
+         
         }
 
         private void diffBtn_Click(object sender, EventArgs e)
         {
-            difficulty = ((Button)sender).Text;
+            difficulty = ((Button)sender).Text.ToLower();
             menuPanel.Hide();
         }
 

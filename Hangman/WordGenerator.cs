@@ -33,6 +33,6 @@ namespace Hangman
 
         public string easyWord { get { return WordPicker("easy"); } }
         public string mediumWord { get { return WordPicker("medium"); } }
-        public string HardWord { get { return WordPicker("hard"); } }
+        public string hardWord { get { return WordPicker("hard"); } }
     }
 }

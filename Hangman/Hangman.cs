@@ -38,8 +38,14 @@ namespace Hangman
         }
         private void Startup()
         {
+            //Makes potential hidden buttons visible
+            foreach (var button in this.Controls.OfType<Button>())
+            {
+                button.Visible = true;
+            }
+            lives = 8;
+            //Get word from wordgenerator clas
             WordGenerator getWord = new WordGenerator();
-            lives = 7;
             switch (difficulty)
             {
                 case "easy":
@@ -52,26 +58,53 @@ namespace Hangman
                     word = getWord.hardWord;
                     break;
             }
+            word = word.ToUpper();
+            //devhax, remove later
+            label1.Text = word;
+            wordDisplay.Text = "";
+            for(int i = 0; i < word.Length; i++)
+            {
+                wordDisplay.Text += "_";
+            }
         }
         private void LetterChecker(char letter)
         {
+            //devhax again
+            label2.Text = letter.ToString();
+            char[] wipWordDisplay = wordDisplay.Text.ToCharArray();
             if (word.Contains(letter))
             {
-
+                for(int i = 0; i < word.Length; i++)
+                {
+                    if (word[i] == letter)
+                    {
+                        wipWordDisplay[i] = letter;
+                    }
+                }
+                wordDisplay.Text = new string(wipWordDisplay);
             }
             else
             {
-                lives--;
+                LoseLife();
             }
          
         }
+        private void LoseLife()
+        {
+           
 
-        private void diffBtn_Click(object sender, EventArgs e)
+        }
+
+        private void difficultyBtn_Click(object sender, EventArgs e)
         {
             difficulty = ((Button)sender).Text.ToLower();
             menuPanel.Hide();
+            Startup();
         }
 
-        
+        private void restartBtn_Click(object sender, EventArgs e)
+        {
+            menuPanel.Visible=true;
+        }
     }
 }

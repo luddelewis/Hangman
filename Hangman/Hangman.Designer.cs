@@ -63,6 +63,9 @@ namespace Hangman
             this.easyBtn = new System.Windows.Forms.Button();
             this.diffLabel = new System.Windows.Forms.Label();
             this.wordDisplay = new System.Windows.Forms.Label();
+            this.restartBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.menuPanel.SuspendLayout();
             this.SuspendLayout();
@@ -504,7 +507,7 @@ namespace Hangman
             this.hardBtn.TabIndex = 0;
             this.hardBtn.Text = "Hard";
             this.hardBtn.UseVisualStyleBackColor = true;
-            this.hardBtn.Click += new System.EventHandler(this.diffBtn_Click);
+            this.hardBtn.Click += new System.EventHandler(this.difficultyBtn_Click);
             // 
             // medBtn
             // 
@@ -519,7 +522,7 @@ namespace Hangman
             this.medBtn.TabIndex = 0;
             this.medBtn.Text = "Medium";
             this.medBtn.UseVisualStyleBackColor = true;
-            this.medBtn.Click += new System.EventHandler(this.diffBtn_Click);
+            this.medBtn.Click += new System.EventHandler(this.difficultyBtn_Click);
             // 
             // easyBtn
             // 
@@ -534,7 +537,7 @@ namespace Hangman
             this.easyBtn.TabIndex = 0;
             this.easyBtn.Text = "Easy";
             this.easyBtn.UseVisualStyleBackColor = true;
-            this.easyBtn.Click += new System.EventHandler(this.diffBtn_Click);
+            this.easyBtn.Click += new System.EventHandler(this.difficultyBtn_Click);
             // 
             // diffLabel
             // 
@@ -556,8 +559,40 @@ namespace Hangman
             this.wordDisplay.Name = "wordDisplay";
             this.wordDisplay.Size = new System.Drawing.Size(437, 49);
             this.wordDisplay.TabIndex = 0;
-            this.wordDisplay.Text = "Example";
             this.wordDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // restartBtn
+            // 
+            this.restartBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.restartBtn.FlatAppearance.BorderSize = 0;
+            this.restartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.restartBtn.Font = new System.Drawing.Font("Digital-7 Mono", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restartBtn.ForeColor = System.Drawing.Color.White;
+            this.restartBtn.Location = new System.Drawing.Point(722, 499);
+            this.restartBtn.Name = "restartBtn";
+            this.restartBtn.Size = new System.Drawing.Size(50, 50);
+            this.restartBtn.TabIndex = 30;
+            this.restartBtn.Text = "↺";
+            this.restartBtn.UseVisualStyleBackColor = true;
+            this.restartBtn.Click += new System.EventHandler(this.restartBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(112, 333);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(180, 333);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "label2";
             // 
             // Hangman
             // 
@@ -565,6 +600,9 @@ namespace Hangman
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.restartBtn);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.sBtn);
             this.Controls.Add(this.wBtn);
@@ -602,6 +640,7 @@ namespace Hangman
             this.menuPanel.ResumeLayout(false);
             this.menuPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -640,6 +679,9 @@ namespace Hangman
         private System.Windows.Forms.Button medBtn;
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Label wordDisplay;
+        public System.Windows.Forms.Button restartBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

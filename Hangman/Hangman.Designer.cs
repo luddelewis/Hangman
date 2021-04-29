@@ -66,8 +66,12 @@ namespace Hangman
             this.restartBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.gameoverPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.menuPanel.SuspendLayout();
+            this.gameoverPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // yBtn
@@ -477,7 +481,7 @@ namespace Hangman
             this.menuPanel.Controls.Add(this.easyBtn);
             this.menuPanel.Controls.Add(this.diffLabel);
             this.menuPanel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.menuPanel.Location = new System.Drawing.Point(12, 12);
+            this.menuPanel.Location = new System.Drawing.Point(15, 12);
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(760, 537);
             this.menuPanel.TabIndex = 0;
@@ -594,16 +598,53 @@ namespace Hangman
             this.label2.TabIndex = 32;
             this.label2.Text = "label2";
             // 
+            // gameoverPanel
+            // 
+            this.gameoverPanel.Controls.Add(this.button1);
+            this.gameoverPanel.Controls.Add(this.label3);
+            this.gameoverPanel.Location = new System.Drawing.Point(12, 323);
+            this.gameoverPanel.Name = "gameoverPanel";
+            this.gameoverPanel.Size = new System.Drawing.Size(760, 233);
+            this.gameoverPanel.TabIndex = 34;
+            this.gameoverPanel.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Digital-7 Mono", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(252, 92);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(256, 50);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Try Again?";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.restartBtn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Digital-7 Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(260, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(241, 49);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Game over!";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Hangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.menuPanel);
+            this.Controls.Add(this.gameoverPanel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.restartBtn);
-            this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.sBtn);
             this.Controls.Add(this.wBtn);
             this.Controls.Add(this.aBtn);
@@ -632,6 +673,7 @@ namespace Hangman
             this.Controls.Add(this.yBtn);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.wordDisplay);
+            this.Controls.Add(this.restartBtn);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Hangman";
             this.Text = "Hangman";
@@ -639,6 +681,8 @@ namespace Hangman
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.menuPanel.ResumeLayout(false);
             this.menuPanel.PerformLayout();
+            this.gameoverPanel.ResumeLayout(false);
+            this.gameoverPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -682,6 +726,9 @@ namespace Hangman
         public System.Windows.Forms.Button restartBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel gameoverPanel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

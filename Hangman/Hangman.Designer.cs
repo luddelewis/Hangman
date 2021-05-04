@@ -55,7 +55,6 @@ namespace Hangman
             this.wBtn = new System.Windows.Forms.Button();
             this.aBtn = new System.Windows.Forms.Button();
             this.qBtn = new System.Windows.Forms.Button();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.menuPanel = new System.Windows.Forms.Panel();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.hardBtn = new System.Windows.Forms.Button();
@@ -69,9 +68,14 @@ namespace Hangman
             this.gameoverPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.winPanel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.winLabel = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.menuPanel.SuspendLayout();
             this.gameoverPanel.SuspendLayout();
+            this.winPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // yBtn
@@ -464,15 +468,6 @@ namespace Hangman
             this.qBtn.UseVisualStyleBackColor = true;
             this.qBtn.Click += new System.EventHandler(this.LetterClick);
             // 
-            // pictureBox
-            // 
-            this.pictureBox.Image = global::Hangman.Properties.Resources._8;
-            this.pictureBox.Location = new System.Drawing.Point(87, 33);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(610, 278);
-            this.pictureBox.TabIndex = 29;
-            this.pictureBox.TabStop = false;
-            // 
             // menuPanel
             // 
             this.menuPanel.Controls.Add(this.welcomeLabel);
@@ -635,6 +630,52 @@ namespace Hangman
             this.label3.Text = "Game over!";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // winPanel
+            // 
+            this.winPanel.Controls.Add(this.button2);
+            this.winPanel.Controls.Add(this.winLabel);
+            this.winPanel.Location = new System.Drawing.Point(72, 12);
+            this.winPanel.Name = "winPanel";
+            this.winPanel.Size = new System.Drawing.Size(700, 233);
+            this.winPanel.TabIndex = 0;
+            this.winPanel.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Digital-7 Mono", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(222, 97);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(256, 50);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Play Again?";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.restartBtn_Click);
+            // 
+            // winLabel
+            // 
+            this.winLabel.AutoSize = true;
+            this.winLabel.Font = new System.Drawing.Font("Digital-7 Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winLabel.ForeColor = System.Drawing.Color.White;
+            this.winLabel.Location = new System.Drawing.Point(252, 45);
+            this.winLabel.Name = "winLabel";
+            this.winLabel.Size = new System.Drawing.Size(197, 49);
+            this.winLabel.TabIndex = 5;
+            this.winLabel.Text = "You Win!";
+            this.winLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Image = global::Hangman.Properties.Resources._8;
+            this.pictureBox.Location = new System.Drawing.Point(87, 33);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(610, 278);
+            this.pictureBox.TabIndex = 29;
+            this.pictureBox.TabStop = false;
+            // 
             // Hangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -642,6 +683,7 @@ namespace Hangman
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.menuPanel);
+            this.Controls.Add(this.winPanel);
             this.Controls.Add(this.gameoverPanel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -674,15 +716,18 @@ namespace Hangman
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.wordDisplay);
             this.Controls.Add(this.restartBtn);
+            this.MaximumSize = new System.Drawing.Size(800, 600);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Hangman";
             this.Text = "Hangman";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Hangman_KeyPress);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.menuPanel.ResumeLayout(false);
             this.menuPanel.PerformLayout();
             this.gameoverPanel.ResumeLayout(false);
             this.gameoverPanel.PerformLayout();
+            this.winPanel.ResumeLayout(false);
+            this.winPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -729,6 +774,9 @@ namespace Hangman
         private System.Windows.Forms.Panel gameoverPanel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel winPanel;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label winLabel;
     }
 }
 

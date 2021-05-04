@@ -23,6 +23,10 @@ namespace Lexiconsort
             List<string> cookedLexicon = new List<string>();
             // Uses the OrderBy method to sort the words in rawLexicon in ascending order in cookedLexicon
             cookedLexicon = rawLexicon.OrderBy(word => word.Length).ToList();
+            for(int i = 0; i < cookedLexicon.ToArray().Length; i++)
+            {
+                cookedLexicon[i] = cookedLexicon[i].ToUpper();
+            }
             //Writes the now sorted lexicon into a txt file
             File.WriteAllLines("../../CookedHanglexicon.txt", cookedLexicon.ToArray());
             for(int i = 0; i <rawLexicon.ToArray().Length;i++)

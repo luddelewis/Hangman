@@ -29,8 +29,10 @@ namespace Hangman
         private void restartBtn_Click(object sender, EventArgs e)
         {
             //resets the game
-            menuPanel.Visible = true;
-            gameoverPanel.Visible = false;
+            menuPanel.Show();
+            gameoverPanel.Hide();
+            winPanel.Hide();
+
             //Makes potential hidden buttons visible
             foreach (var button in this.Controls.OfType<Button>())
             {
@@ -39,7 +41,10 @@ namespace Hangman
         }
         private void Startup()
         {
+            //Resetting from possible previous plays
+            wordDisplay.Text = "";
             lives = 8;
+            pictureBox.Image = Properties.Resources._8;
             //Get a word from the wordgenerator class
             WordGenerator getWord = new WordGenerator();
             switch (difficulty)
@@ -54,18 +59,19 @@ namespace Hangman
                     word = getWord.hardWord;
                     break;
             }
-            word = word.ToUpper();
             //devhax, remove later
             label1.Text = word;
-            wordDisplay.Text = "";
+
+            //Displays a "_" for each letter in the word
             for (int i = 0; i < word.Length; i++)
             {
                 wordDisplay.Text += "_";
             }
         }
+        //This function is broken, needs fixing
         private void Hangman_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //This function is broken, needs fixing
+            
             char pressedKey;
             pressedKey = char.ToUpper(e.KeyChar);
             if (char.IsLetter(pressedKey))
@@ -74,6 +80,7 @@ namespace Hangman
             }
 
         }
+        //Function for on clickable on screen buttons
         private void LetterClick(object sender, EventArgs e)
         {
             ((Button)sender).Hide();
@@ -84,9 +91,11 @@ namespace Hangman
         {
             //devhax again
             label2.Text = letter.ToString();
+            //Converting to char array so individual letters can be changed
             char[] wipWordDisplay = wordDisplay.Text.ToCharArray();
             if (word.Contains(letter))
             {
+                //Looks for the letter in the word and replaces "_" with it
                 for(int i = 0; i < word.Length; i++)
                 {
                     if (word[i] == letter)
@@ -95,20 +104,23 @@ namespace Hangman
                     }
                 }
                 wordDisplay.Text = new string(wipWordDisplay);
+                //Checks if the game is won
+                if (wordDisplay.Text == word)
+                {
+                    Win();
+                }
             }
             else
             {
                 LoseLife();
             }
         }
+        //Function for changing image and losing life
         private void LoseLife()
         {
             lives--;
             switch (lives)
             {
-                case 8:
-                    pictureBox.Image = Properties.Resources._8;
-                    break;
                 case 7:
                     pictureBox.Image = Properties.Resources._7;
                     break;
@@ -131,11 +143,21 @@ namespace Hangman
                     pictureBox.Image = Properties.Resources._1;
                     break;
                 case 0:
+                    //remove
                     label2.Text = "loss";
                     pictureBox.Image = Properties.Resources._0;
                     gameoverPanel.Show();
                     break;
             }
+        }
+        private void Win()
+        {
+            //remove
+            label2.Text = "win";
+            //Changes location to fix issue with inheritence if it is already there in the desinger
+            winPanel.Location = new Point(72, 323);
+            winPanel.Show();
+            pictureBox.Image = Properties.Resources.Win;
         }
     }
 }

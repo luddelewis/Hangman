@@ -41,7 +41,7 @@ namespace Hangman
         }
         private void Startup()
         {
-            //Resetting from possible previous plays
+            //Reset from possible previous plays
             wordDisplay.Text = "";
             lives = 8;
             pictureBox.Image = Properties.Resources._8;
@@ -71,7 +71,6 @@ namespace Hangman
         //This function is broken, needs fixing
         private void Hangman_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
             char pressedKey;
             pressedKey = char.ToUpper(e.KeyChar);
             if (char.IsLetter(pressedKey))
@@ -83,7 +82,6 @@ namespace Hangman
         //Function for on clickable on screen buttons
         private void LetterClick(object sender, EventArgs e)
         {
-            ((Button)sender).Hide();
             LetterChecker(char.Parse(((Button)sender).Text));
         }
        
@@ -91,7 +89,15 @@ namespace Hangman
         {
             //devhax again
             label2.Text = letter.ToString();
-            //Converting to char array so individual letters can be changed
+            //Hides the pressed letter
+            foreach (var button in this.Controls.OfType<Button>())
+            {
+                if (button.Text == letter.ToString())
+                {
+                    button.Hide();
+                }
+            }
+            //Making a wip chararray so individual letters may be changed
             char[] wipWordDisplay = wordDisplay.Text.ToCharArray();
             if (word.Contains(letter))
             {
@@ -103,6 +109,7 @@ namespace Hangman
                         wipWordDisplay[i] = letter;
                     }
                 }
+                //
                 wordDisplay.Text = new string(wipWordDisplay);
                 //Checks if the game is won
                 if (wordDisplay.Text == word)
@@ -159,5 +166,7 @@ namespace Hangman
             winPanel.Show();
             pictureBox.Image = Properties.Resources.Win;
         }
+
+       
     }
 }

@@ -476,7 +476,7 @@ namespace Hangman
             this.menuPanel.Controls.Add(this.easyBtn);
             this.menuPanel.Controls.Add(this.diffLabel);
             this.menuPanel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.menuPanel.Location = new System.Drawing.Point(15, 12);
+            this.menuPanel.Location = new System.Drawing.Point(12, 12);
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(760, 537);
             this.menuPanel.TabIndex = 0;
@@ -716,6 +716,7 @@ namespace Hangman
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.wordDisplay);
             this.Controls.Add(this.restartBtn);
+            this.KeyPreview = true;
             this.MaximumSize = new System.Drawing.Size(800, 600);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Hangman";

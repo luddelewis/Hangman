@@ -26,7 +26,7 @@ namespace Hangman
         {
             //Moves the panels to their correct locations
             //They are moved to the side in the desinger so they don't cover everything
-            winPanel.Location = new Point(72, 323);
+            winPanel.Location = new Point(12, 323);
             menuPanel.Location = new Point(15, 12);
             gameoverPanel.Location = new Point(12, 323);
         }
@@ -153,7 +153,5 @@ namespace Hangman
             winPanel.Show();
             pictureBox.Image = Properties.Resources.Win;
         }
-
-        
     }
 }

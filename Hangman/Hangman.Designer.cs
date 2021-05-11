@@ -64,15 +64,15 @@ namespace Hangman
             this.wordDisplay = new System.Windows.Forms.Label();
             this.restartBtn = new System.Windows.Forms.Button();
             this.gameoverPanel = new System.Windows.Forms.Panel();
+            this.lossWordWasLabel = new System.Windows.Forms.Label();
             this.tryAgainBtn = new System.Windows.Forms.Button();
             this.gameOverLabel = new System.Windows.Forms.Label();
             this.winPanel = new System.Windows.Forms.Panel();
+            this.winWordWasLabel = new System.Windows.Forms.Label();
             this.playAgainBtn = new System.Windows.Forms.Button();
             this.winLabel = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.guessesLeftLabel = new System.Windows.Forms.Label();
-            this.lossWordWasLabel = new System.Windows.Forms.Label();
-            this.winWordWasLabel = new System.Windows.Forms.Label();
             this.menuPanel.SuspendLayout();
             this.gameoverPanel.SuspendLayout();
             this.winPanel.SuspendLayout();
@@ -84,7 +84,7 @@ namespace Hangman
             this.yBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.yBtn.FlatAppearance.BorderSize = 0;
             this.yBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.yBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yBtn.ForeColor = System.Drawing.Color.White;
             this.yBtn.Location = new System.Drawing.Point(395, 375);
             this.yBtn.Name = "yBtn";
@@ -99,7 +99,7 @@ namespace Hangman
             this.hBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hBtn.FlatAppearance.BorderSize = 0;
             this.hBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hBtn.ForeColor = System.Drawing.Color.White;
             this.hBtn.Location = new System.Drawing.Point(423, 431);
             this.hBtn.Name = "hBtn";
@@ -114,7 +114,7 @@ namespace Hangman
             this.vBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.vBtn.FlatAppearance.BorderSize = 0;
             this.vBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vBtn.ForeColor = System.Drawing.Color.White;
             this.vBtn.Location = new System.Drawing.Point(367, 487);
             this.vBtn.Name = "vBtn";
@@ -129,7 +129,7 @@ namespace Hangman
             this.bBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bBtn.FlatAppearance.BorderSize = 0;
             this.bBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBtn.ForeColor = System.Drawing.Color.White;
             this.bBtn.Location = new System.Drawing.Point(423, 487);
             this.bBtn.Name = "bBtn";
@@ -144,7 +144,7 @@ namespace Hangman
             this.jBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.jBtn.FlatAppearance.BorderSize = 0;
             this.jBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.jBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jBtn.ForeColor = System.Drawing.Color.White;
             this.jBtn.Location = new System.Drawing.Point(479, 431);
             this.jBtn.Name = "jBtn";
@@ -159,7 +159,7 @@ namespace Hangman
             this.uBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uBtn.FlatAppearance.BorderSize = 0;
             this.uBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uBtn.ForeColor = System.Drawing.Color.White;
             this.uBtn.Location = new System.Drawing.Point(451, 375);
             this.uBtn.Name = "uBtn";
@@ -174,7 +174,7 @@ namespace Hangman
             this.nBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nBtn.FlatAppearance.BorderSize = 0;
             this.nBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nBtn.ForeColor = System.Drawing.Color.White;
             this.nBtn.Location = new System.Drawing.Point(479, 487);
             this.nBtn.Name = "nBtn";
@@ -189,7 +189,7 @@ namespace Hangman
             this.kBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.kBtn.FlatAppearance.BorderSize = 0;
             this.kBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kBtn.ForeColor = System.Drawing.Color.White;
             this.kBtn.Location = new System.Drawing.Point(535, 431);
             this.kBtn.Name = "kBtn";
@@ -204,7 +204,7 @@ namespace Hangman
             this.iBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iBtn.FlatAppearance.BorderSize = 0;
             this.iBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iBtn.ForeColor = System.Drawing.Color.White;
             this.iBtn.Location = new System.Drawing.Point(507, 375);
             this.iBtn.Name = "iBtn";
@@ -219,7 +219,7 @@ namespace Hangman
             this.mBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.mBtn.FlatAppearance.BorderSize = 0;
             this.mBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mBtn.ForeColor = System.Drawing.Color.White;
             this.mBtn.Location = new System.Drawing.Point(535, 487);
             this.mBtn.Name = "mBtn";
@@ -234,7 +234,7 @@ namespace Hangman
             this.lBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lBtn.FlatAppearance.BorderSize = 0;
             this.lBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBtn.ForeColor = System.Drawing.Color.White;
             this.lBtn.Location = new System.Drawing.Point(591, 431);
             this.lBtn.Name = "lBtn";
@@ -249,7 +249,7 @@ namespace Hangman
             this.oBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.oBtn.FlatAppearance.BorderSize = 0;
             this.oBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.oBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oBtn.ForeColor = System.Drawing.Color.White;
             this.oBtn.Location = new System.Drawing.Point(563, 375);
             this.oBtn.Name = "oBtn";
@@ -264,7 +264,7 @@ namespace Hangman
             this.cBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cBtn.FlatAppearance.BorderSize = 0;
             this.cBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBtn.ForeColor = System.Drawing.Color.White;
             this.cBtn.Location = new System.Drawing.Point(311, 487);
             this.cBtn.Name = "cBtn";
@@ -279,7 +279,7 @@ namespace Hangman
             this.gBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gBtn.FlatAppearance.BorderSize = 0;
             this.gBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBtn.ForeColor = System.Drawing.Color.White;
             this.gBtn.Location = new System.Drawing.Point(367, 431);
             this.gBtn.Name = "gBtn";
@@ -294,7 +294,7 @@ namespace Hangman
             this.tBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tBtn.FlatAppearance.BorderSize = 0;
             this.tBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBtn.ForeColor = System.Drawing.Color.White;
             this.tBtn.Location = new System.Drawing.Point(339, 375);
             this.tBtn.Name = "tBtn";
@@ -309,7 +309,7 @@ namespace Hangman
             this.xBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.xBtn.FlatAppearance.BorderSize = 0;
             this.xBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.xBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xBtn.ForeColor = System.Drawing.Color.White;
             this.xBtn.Location = new System.Drawing.Point(255, 487);
             this.xBtn.Name = "xBtn";
@@ -324,7 +324,7 @@ namespace Hangman
             this.fBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fBtn.FlatAppearance.BorderSize = 0;
             this.fBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fBtn.ForeColor = System.Drawing.Color.White;
             this.fBtn.Location = new System.Drawing.Point(311, 431);
             this.fBtn.Name = "fBtn";
@@ -339,7 +339,7 @@ namespace Hangman
             this.rBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rBtn.FlatAppearance.BorderSize = 0;
             this.rBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rBtn.ForeColor = System.Drawing.Color.White;
             this.rBtn.Location = new System.Drawing.Point(283, 375);
             this.rBtn.Name = "rBtn";
@@ -354,7 +354,7 @@ namespace Hangman
             this.zBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.zBtn.FlatAppearance.BorderSize = 0;
             this.zBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.zBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.zBtn.ForeColor = System.Drawing.Color.White;
             this.zBtn.Location = new System.Drawing.Point(199, 487);
             this.zBtn.Name = "zBtn";
@@ -369,7 +369,7 @@ namespace Hangman
             this.dBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dBtn.FlatAppearance.BorderSize = 0;
             this.dBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dBtn.ForeColor = System.Drawing.Color.White;
             this.dBtn.Location = new System.Drawing.Point(255, 431);
             this.dBtn.Name = "dBtn";
@@ -384,7 +384,7 @@ namespace Hangman
             this.eBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.eBtn.FlatAppearance.BorderSize = 0;
             this.eBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.eBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eBtn.ForeColor = System.Drawing.Color.White;
             this.eBtn.Location = new System.Drawing.Point(227, 375);
             this.eBtn.Name = "eBtn";
@@ -399,7 +399,7 @@ namespace Hangman
             this.pBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBtn.FlatAppearance.BorderSize = 0;
             this.pBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pBtn.ForeColor = System.Drawing.Color.White;
             this.pBtn.Location = new System.Drawing.Point(619, 375);
             this.pBtn.Name = "pBtn";
@@ -414,7 +414,7 @@ namespace Hangman
             this.sBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sBtn.FlatAppearance.BorderSize = 0;
             this.sBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sBtn.ForeColor = System.Drawing.Color.White;
             this.sBtn.Location = new System.Drawing.Point(199, 431);
             this.sBtn.Name = "sBtn";
@@ -429,7 +429,7 @@ namespace Hangman
             this.wBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.wBtn.FlatAppearance.BorderSize = 0;
             this.wBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.wBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wBtn.ForeColor = System.Drawing.Color.White;
             this.wBtn.Location = new System.Drawing.Point(171, 375);
             this.wBtn.Name = "wBtn";
@@ -444,7 +444,7 @@ namespace Hangman
             this.aBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.aBtn.FlatAppearance.BorderSize = 0;
             this.aBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aBtn.ForeColor = System.Drawing.Color.White;
             this.aBtn.Location = new System.Drawing.Point(143, 431);
             this.aBtn.Name = "aBtn";
@@ -459,7 +459,7 @@ namespace Hangman
             this.qBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.qBtn.FlatAppearance.BorderSize = 0;
             this.qBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.qBtn.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qBtn.ForeColor = System.Drawing.Color.White;
             this.qBtn.Location = new System.Drawing.Point(115, 375);
             this.qBtn.Name = "qBtn";
@@ -479,17 +479,17 @@ namespace Hangman
             this.menuPanel.Cursor = System.Windows.Forms.Cursors.Default;
             this.menuPanel.Location = new System.Drawing.Point(768, 511);
             this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Size = new System.Drawing.Size(760, 537);
+            this.menuPanel.Size = new System.Drawing.Size(760, 585);
             this.menuPanel.TabIndex = 0;
             // 
             // welcomeLabel
             // 
             this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Digital-7 Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.ForeColor = System.Drawing.Color.White;
-            this.welcomeLabel.Location = new System.Drawing.Point(162, 86);
+            this.welcomeLabel.Location = new System.Drawing.Point(121, 86);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(437, 49);
+            this.welcomeLabel.Size = new System.Drawing.Size(521, 55);
             this.welcomeLabel.TabIndex = 0;
             this.welcomeLabel.Text = "Welcome To hangman!";
             this.welcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -499,7 +499,7 @@ namespace Hangman
             this.hardBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hardBtn.FlatAppearance.BorderSize = 0;
             this.hardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hardBtn.Font = new System.Drawing.Font("Digital-7 Mono", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hardBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hardBtn.ForeColor = System.Drawing.Color.White;
             this.hardBtn.Location = new System.Drawing.Point(305, 316);
             this.hardBtn.Name = "hardBtn";
@@ -514,11 +514,11 @@ namespace Hangman
             this.medBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.medBtn.FlatAppearance.BorderSize = 0;
             this.medBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.medBtn.Font = new System.Drawing.Font("Digital-7 Mono", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medBtn.ForeColor = System.Drawing.Color.White;
-            this.medBtn.Location = new System.Drawing.Point(305, 260);
+            this.medBtn.Location = new System.Drawing.Point(279, 260);
             this.medBtn.Name = "medBtn";
-            this.medBtn.Size = new System.Drawing.Size(150, 50);
+            this.medBtn.Size = new System.Drawing.Size(203, 50);
             this.medBtn.TabIndex = 0;
             this.medBtn.TabStop = false;
             this.medBtn.Text = "Medium";
@@ -530,7 +530,7 @@ namespace Hangman
             this.easyBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.easyBtn.FlatAppearance.BorderSize = 0;
             this.easyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.easyBtn.Font = new System.Drawing.Font("Digital-7 Mono", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.easyBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.easyBtn.ForeColor = System.Drawing.Color.White;
             this.easyBtn.Location = new System.Drawing.Point(305, 204);
             this.easyBtn.Name = "easyBtn";
@@ -544,22 +544,22 @@ namespace Hangman
             // difficultyLabel
             // 
             this.difficultyLabel.AutoSize = true;
-            this.difficultyLabel.Font = new System.Drawing.Font("Digital-7 Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.difficultyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.difficultyLabel.ForeColor = System.Drawing.Color.White;
-            this.difficultyLabel.Location = new System.Drawing.Point(182, 152);
+            this.difficultyLabel.Location = new System.Drawing.Point(203, 152);
             this.difficultyLabel.Name = "difficultyLabel";
-            this.difficultyLabel.Size = new System.Drawing.Size(396, 49);
+            this.difficultyLabel.Size = new System.Drawing.Size(349, 55);
             this.difficultyLabel.TabIndex = 0;
             this.difficultyLabel.Text = "Select Difficulty";
             this.difficultyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // wordDisplay
             // 
-            this.wordDisplay.Font = new System.Drawing.Font("Digital-7 Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wordDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wordDisplay.ForeColor = System.Drawing.Color.White;
-            this.wordDisplay.Location = new System.Drawing.Point(174, 323);
+            this.wordDisplay.Location = new System.Drawing.Point(170, 320);
             this.wordDisplay.Name = "wordDisplay";
-            this.wordDisplay.Size = new System.Drawing.Size(437, 49);
+            this.wordDisplay.Size = new System.Drawing.Size(437, 52);
             this.wordDisplay.TabIndex = 0;
             this.wordDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -568,7 +568,7 @@ namespace Hangman
             this.restartBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.restartBtn.FlatAppearance.BorderSize = 0;
             this.restartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.restartBtn.Font = new System.Drawing.Font("Digital-7 Mono", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restartBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restartBtn.ForeColor = System.Drawing.Color.White;
             this.restartBtn.Location = new System.Drawing.Point(722, 499);
             this.restartBtn.Name = "restartBtn";
@@ -583,18 +583,29 @@ namespace Hangman
             this.gameoverPanel.Controls.Add(this.lossWordWasLabel);
             this.gameoverPanel.Controls.Add(this.tryAgainBtn);
             this.gameoverPanel.Controls.Add(this.gameOverLabel);
-            this.gameoverPanel.Location = new System.Drawing.Point(768, 272);
+            this.gameoverPanel.Location = new System.Drawing.Point(771, 272);
             this.gameoverPanel.Name = "gameoverPanel";
             this.gameoverPanel.Size = new System.Drawing.Size(760, 233);
             this.gameoverPanel.TabIndex = 34;
             this.gameoverPanel.Visible = false;
+            // 
+            // lossWordWasLabel
+            // 
+            this.lossWordWasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lossWordWasLabel.ForeColor = System.Drawing.Color.White;
+            this.lossWordWasLabel.Location = new System.Drawing.Point(73, 90);
+            this.lossWordWasLabel.Name = "lossWordWasLabel";
+            this.lossWordWasLabel.Size = new System.Drawing.Size(614, 49);
+            this.lossWordWasLabel.TabIndex = 0;
+            this.lossWordWasLabel.Text = "The word was ";
+            this.lossWordWasLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tryAgainBtn
             // 
             this.tryAgainBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tryAgainBtn.FlatAppearance.BorderSize = 0;
             this.tryAgainBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tryAgainBtn.Font = new System.Drawing.Font("Digital-7 Mono", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tryAgainBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tryAgainBtn.ForeColor = System.Drawing.Color.White;
             this.tryAgainBtn.Location = new System.Drawing.Point(252, 142);
             this.tryAgainBtn.Name = "tryAgainBtn";
@@ -607,11 +618,11 @@ namespace Hangman
             // gameOverLabel
             // 
             this.gameOverLabel.AutoSize = true;
-            this.gameOverLabel.Font = new System.Drawing.Font("Digital-7 Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameOverLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameOverLabel.ForeColor = System.Drawing.Color.White;
-            this.gameOverLabel.Location = new System.Drawing.Point(260, 41);
+            this.gameOverLabel.Location = new System.Drawing.Point(243, 41);
             this.gameOverLabel.Name = "gameOverLabel";
-            this.gameOverLabel.Size = new System.Drawing.Size(241, 49);
+            this.gameOverLabel.Size = new System.Drawing.Size(275, 55);
             this.gameOverLabel.TabIndex = 0;
             this.gameOverLabel.Text = "Game over!";
             this.gameOverLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -623,18 +634,29 @@ namespace Hangman
             this.winPanel.Controls.Add(this.winLabel);
             this.winPanel.Location = new System.Drawing.Point(768, 33);
             this.winPanel.Name = "winPanel";
-            this.winPanel.Size = new System.Drawing.Size(700, 233);
+            this.winPanel.Size = new System.Drawing.Size(760, 233);
             this.winPanel.TabIndex = 0;
             this.winPanel.Visible = false;
+            // 
+            // winWordWasLabel
+            // 
+            this.winWordWasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winWordWasLabel.ForeColor = System.Drawing.Color.White;
+            this.winWordWasLabel.Location = new System.Drawing.Point(73, 90);
+            this.winWordWasLabel.Name = "winWordWasLabel";
+            this.winWordWasLabel.Size = new System.Drawing.Size(614, 49);
+            this.winWordWasLabel.TabIndex = 0;
+            this.winWordWasLabel.Text = "The word was \"\"";
+            this.winWordWasLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // playAgainBtn
             // 
             this.playAgainBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.playAgainBtn.FlatAppearance.BorderSize = 0;
             this.playAgainBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.playAgainBtn.Font = new System.Drawing.Font("Digital-7 Mono", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playAgainBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playAgainBtn.ForeColor = System.Drawing.Color.White;
-            this.playAgainBtn.Location = new System.Drawing.Point(222, 142);
+            this.playAgainBtn.Location = new System.Drawing.Point(252, 142);
             this.playAgainBtn.Name = "playAgainBtn";
             this.playAgainBtn.Size = new System.Drawing.Size(256, 50);
             this.playAgainBtn.TabIndex = 0;
@@ -645,11 +667,11 @@ namespace Hangman
             // winLabel
             // 
             this.winLabel.AutoSize = true;
-            this.winLabel.Font = new System.Drawing.Font("Digital-7 Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winLabel.ForeColor = System.Drawing.Color.White;
-            this.winLabel.Location = new System.Drawing.Point(252, 41);
+            this.winLabel.Location = new System.Drawing.Point(271, 41);
             this.winLabel.Name = "winLabel";
-            this.winLabel.Size = new System.Drawing.Size(197, 49);
+            this.winLabel.Size = new System.Drawing.Size(218, 55);
             this.winLabel.TabIndex = 0;
             this.winLabel.Text = "You Win!";
             this.winLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -666,43 +688,21 @@ namespace Hangman
             // guessesLeftLabel
             // 
             this.guessesLeftLabel.AutoSize = true;
-            this.guessesLeftLabel.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guessesLeftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guessesLeftLabel.ForeColor = System.Drawing.Color.White;
             this.guessesLeftLabel.Location = new System.Drawing.Point(12, 532);
             this.guessesLeftLabel.Name = "guessesLeftLabel";
-            this.guessesLeftLabel.Size = new System.Drawing.Size(144, 20);
+            this.guessesLeftLabel.Size = new System.Drawing.Size(132, 24);
             this.guessesLeftLabel.TabIndex = 6;
-            this.guessesLeftLabel.Text = "guesses left: 8";
+            this.guessesLeftLabel.Text = "Guesses left: 8";
             this.guessesLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lossWordWasLabel
-            // 
-            this.lossWordWasLabel.Font = new System.Drawing.Font("Digital-7 Mono", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lossWordWasLabel.ForeColor = System.Drawing.Color.White;
-            this.lossWordWasLabel.Location = new System.Drawing.Point(73, 90);
-            this.lossWordWasLabel.Name = "lossWordWasLabel";
-            this.lossWordWasLabel.Size = new System.Drawing.Size(614, 49);
-            this.lossWordWasLabel.TabIndex = 0;
-            this.lossWordWasLabel.Text = "The word was \"\"";
-            this.lossWordWasLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // winWordWasLabel
-            // 
-            this.winWordWasLabel.Font = new System.Drawing.Font("Digital-7 Mono", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.winWordWasLabel.ForeColor = System.Drawing.Color.White;
-            this.winWordWasLabel.Location = new System.Drawing.Point(43, 90);
-            this.winWordWasLabel.Name = "winWordWasLabel";
-            this.winWordWasLabel.Size = new System.Drawing.Size(614, 49);
-            this.winWordWasLabel.TabIndex = 0;
-            this.winWordWasLabel.Text = "The word was \"\"";
-            this.winWordWasLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Hangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(782, 555);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.winPanel);
             this.Controls.Add(this.gameoverPanel);
@@ -737,10 +737,12 @@ namespace Hangman
             this.Controls.Add(this.guessesLeftLabel);
             this.Controls.Add(this.wordDisplay);
             this.KeyPreview = true;
-            this.MaximumSize = new System.Drawing.Size(800, 600);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.MaximumSize = new System.Drawing.Size(798, 594);
+            this.MinimumSize = new System.Drawing.Size(798, 594);
             this.Name = "Hangman";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hangman";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Hangman_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Hangman_KeyPress);
             this.menuPanel.ResumeLayout(false);

@@ -7,18 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Resources;
 
 namespace Hangman
 {
     public partial class Hangman : Form
     {
         public string difficulty;
-        public int lives;
-        public string word;
+        public int guessesLeft = 8;
+        public string hiddenWord = "";
         
         public Hangman()
         {
             InitializeComponent();
+        }
+        //Event that happens when program is started
+        private void Hangman_Load(object sender, EventArgs e)
+        {
+            //Moves the panels to their correct locations
+            //They are moved to the side in the desinger so they don't cover everything
+            winPanel.Location = new Point(72, 323);
+            menuPanel.Location = new Point(15, 12);
+            gameoverPanel.Location = new Point(12, 323);
         }
         private void difficultyBtn_Click(object sender, EventArgs e)
         {
@@ -32,141 +42,118 @@ namespace Hangman
             menuPanel.Show();
             gameoverPanel.Hide();
             winPanel.Hide();
-
+            guessesLeftLabel.Text = "Guesses left: 8";
+            hiddenWord = "";
             //Makes potential hidden buttons visible
             foreach (var button in this.Controls.OfType<Button>())
             {
                 button.Visible = true;
             }
         }
+        //Function for starting and resetting the game
         private void Startup()
         {
-            //Reset from possible previous plays
+            //Resetting from possible previous plays
             wordDisplay.Text = "";
-            lives = 8;
+            guessesLeft = 8;
             pictureBox.Image = Properties.Resources._8;
-            //Get a word from the wordgenerator class
-            WordGenerator getWord = new WordGenerator();
+            //Get a word from the Hangmanlexicon class
+            HangmanLexicon getWord = new HangmanLexicon();
             switch (difficulty)
             {
                 case "easy":
-                    word = getWord.easyWord;
+                    hiddenWord = getWord.easyWord;
                     break;
                 case "medium":
-                    word = getWord.mediumWord;
+                    hiddenWord = getWord.mediumWord;
                     break;
                 case "hard":
-                    word = getWord.hardWord;
+                    hiddenWord = getWord.hardWord;
                     break;
             }
-            //devhax, remove later
-            label1.Text = word;
-
             //Displays a "_" for each letter in the word
-            for (int i = 0; i < word.Length; i++)
+            for (int i = 0; i < hiddenWord.Length; i++)
             {
                 wordDisplay.Text += "_";
             }
         }
-        //This function is broken, needs fixing
-        private void Hangman_KeyPress(object sender, KeyPressEventArgs e)
+        //Event for  keyboard input
+        private void Hangman_KeyPress(object sender, KeyPressEventArgs pressedKey)
         {
-            char pressedKey;
-            pressedKey = char.ToUpper(e.KeyChar);
-            if (char.IsLetter(pressedKey))
+            //Checks if the pressed key is letter
+            if (char.IsLetter(pressedKey.KeyChar) && hiddenWord != "")
             {
-                LetterChecker(pressedKey);
+                //Feeds GuessChecker the guessed letter
+                GuessChecker(char.ToUpper(pressedKey.KeyChar));
             }
 
         }
-        //Function for on clickable on screen buttons
-        private void LetterClick(object sender, EventArgs e)
+        //Event for on clickable on screen buttons
+        private void LetterClick(object pressedButton, EventArgs e)
         {
-            LetterChecker(char.Parse(((Button)sender).Text));
+            //Feeds GuessChecker the guessed letter
+            GuessChecker(char.Parse(((Button)pressedButton).Text));
         }
-       
-        private void LetterChecker(char letter)
+        //Function for checking the guesses
+        private void GuessChecker(char guessedLetter)
         {
-            //devhax again
-            label2.Text = letter.ToString();
-            //Hides the pressed letter
+            //Hides the guessed letter by checking if the letter matches the text on any of the buttons
             foreach (var button in this.Controls.OfType<Button>())
             {
-                if (button.Text == letter.ToString())
+                if (button.Text == guessedLetter.ToString())
                 {
                     button.Hide();
                 }
             }
-            //Making a wip chararray so individual letters may be changed
+            //Making a wip char[] from wordDisplay so the individual letters may be changed because strings are immutable
             char[] wipWordDisplay = wordDisplay.Text.ToCharArray();
-            if (word.Contains(letter))
+            //Checks if hiddenword isn't empty to fix crash due to keypress in menu
+            if (hiddenWord.Contains(guessedLetter))
             {
-                //Looks for the letter in the word and replaces "_" with it
-                for(int i = 0; i < word.Length; i++)
+                //Looks for the letter in the word and replaces "_" in WordDisplay with it
+                for(int i = 0; i < hiddenWord.Length; i++)
                 {
-                    if (word[i] == letter)
+                    if (hiddenWord[i] == guessedLetter)
                     {
-                        wipWordDisplay[i] = letter;
+                        wipWordDisplay[i] = guessedLetter;
                     }
                 }
-                //
+                //Converts the wip char[] back to a string in order to display it
                 wordDisplay.Text = new string(wipWordDisplay);
                 //Checks if the game is won
-                if (wordDisplay.Text == word)
+                if (wordDisplay.Text == hiddenWord)
                 {
                     Win();
                 }
             }
             else
             {
-                LoseLife();
+                WrongGuess();
             }
         }
-        //Function for changing image and losing life
-        private void LoseLife()
+        //Function for wrong guess
+
+        private void WrongGuess()
         {
-            lives--;
-            switch (lives)
+            guessesLeft--;
+            //Updates guessesLeftLabel
+            guessesLeftLabel.Text=$"Guesses left: {guessesLeft}";
+            //Gets the resource corresponding to the amount of guesses left
+            pictureBox.Image = Properties.Resources.ResourceManager.GetObject(guessesLeft.ToString()) as Bitmap;
+            //Checks if the game is over
+            if (guessesLeft == 0)
             {
-                case 7:
-                    pictureBox.Image = Properties.Resources._7;
-                    break;
-                case 6:
-                    pictureBox.Image = Properties.Resources._6;
-                    break;
-                case 5:
-                    pictureBox.Image = Properties.Resources._5;
-                    break;
-                case 4:
-                    pictureBox.Image = Properties.Resources._4;
-                    break;
-                case 3:
-                    pictureBox.Image = Properties.Resources._3;
-                    break;
-                case 2:
-                    pictureBox.Image = Properties.Resources._2;
-                    break;
-                case 1:
-                    pictureBox.Image = Properties.Resources._1;
-                    break;
-                case 0:
-                    //remove
-                    label2.Text = "loss";
-                    pictureBox.Image = Properties.Resources._0;
-                    gameoverPanel.Show();
-                    break;
+                lossWordWasLabel.Text = $"The word was {hiddenWord}";
+                gameoverPanel.Show();
             }
         }
         private void Win()
         {
-            //remove
-            label2.Text = "win";
-            //Changes location to fix issue with inheritence if it is already there in the desinger
-            winPanel.Location = new Point(72, 323);
+            winWordWasLabel.Text = $"The word was {hiddenWord}";
             winPanel.Show();
             pictureBox.Image = Properties.Resources.Win;
         }
 
-       
+        
     }
 }

@@ -59,7 +59,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="WordGenerator.cs" />
+    <Compile Include="HangmanLexicon.cs" />
     <EmbeddedResource Include="Hangman.resx">
       <DependentUpon>Hangman.cs</DependentUpon>
     </EmbeddedResource>

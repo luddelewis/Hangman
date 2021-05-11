@@ -19,16 +19,17 @@ namespace Lexiconsort
             int indexOf6 = 0;
             int indexOf8 = 0;
             //Reads the rawLexicon from a textfile in the project files
-            List<string> rawLexicon = File.ReadAllLines("../../RawHanglexicon.txt", Encoding.Default).ToList();
+            List<string> rawLexicon = File.ReadAllLines("../../UnsortedHanglexicon.txt", Encoding.Default).ToList();
             List<string> cookedLexicon = new List<string>();
             // Uses the OrderBy method to sort the words in rawLexicon in ascending order in cookedLexicon
             cookedLexicon = rawLexicon.OrderBy(word => word.Length).ToList();
+            //Converting to uppercase
             for(int i = 0; i < cookedLexicon.ToArray().Length; i++)
             {
                 cookedLexicon[i] = cookedLexicon[i].ToUpper();
             }
             //Writes the now sorted lexicon into a txt file
-            File.WriteAllLines("../../CookedHanglexicon.txt", cookedLexicon.ToArray());
+            File.WriteAllLines("../../SortedHanglexicon.txt", cookedLexicon.ToArray());
             for(int i = 0; i <rawLexicon.ToArray().Length;i++)
             {
                 Console.WriteLine(cookedLexicon[i]);

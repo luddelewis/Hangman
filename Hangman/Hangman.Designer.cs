@@ -60,18 +60,19 @@ namespace Hangman
             this.hardBtn = new System.Windows.Forms.Button();
             this.medBtn = new System.Windows.Forms.Button();
             this.easyBtn = new System.Windows.Forms.Button();
-            this.diffLabel = new System.Windows.Forms.Label();
+            this.difficultyLabel = new System.Windows.Forms.Label();
             this.wordDisplay = new System.Windows.Forms.Label();
             this.restartBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.gameoverPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.tryAgainBtn = new System.Windows.Forms.Button();
+            this.gameOverLabel = new System.Windows.Forms.Label();
             this.winPanel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.playAgainBtn = new System.Windows.Forms.Button();
             this.winLabel = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.guessesLeftLabel = new System.Windows.Forms.Label();
+            this.lossWordWasLabel = new System.Windows.Forms.Label();
+            this.winWordWasLabel = new System.Windows.Forms.Label();
             this.menuPanel.SuspendLayout();
             this.gameoverPanel.SuspendLayout();
             this.winPanel.SuspendLayout();
@@ -474,9 +475,9 @@ namespace Hangman
             this.menuPanel.Controls.Add(this.hardBtn);
             this.menuPanel.Controls.Add(this.medBtn);
             this.menuPanel.Controls.Add(this.easyBtn);
-            this.menuPanel.Controls.Add(this.diffLabel);
+            this.menuPanel.Controls.Add(this.difficultyLabel);
             this.menuPanel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.menuPanel.Location = new System.Drawing.Point(12, 12);
+            this.menuPanel.Location = new System.Drawing.Point(768, 511);
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(760, 537);
             this.menuPanel.TabIndex = 0;
@@ -519,6 +520,7 @@ namespace Hangman
             this.medBtn.Name = "medBtn";
             this.medBtn.Size = new System.Drawing.Size(150, 50);
             this.medBtn.TabIndex = 0;
+            this.medBtn.TabStop = false;
             this.medBtn.Text = "Medium";
             this.medBtn.UseVisualStyleBackColor = true;
             this.medBtn.Click += new System.EventHandler(this.difficultyBtn_Click);
@@ -534,21 +536,22 @@ namespace Hangman
             this.easyBtn.Name = "easyBtn";
             this.easyBtn.Size = new System.Drawing.Size(150, 50);
             this.easyBtn.TabIndex = 0;
+            this.easyBtn.TabStop = false;
             this.easyBtn.Text = "Easy";
             this.easyBtn.UseVisualStyleBackColor = true;
             this.easyBtn.Click += new System.EventHandler(this.difficultyBtn_Click);
             // 
-            // diffLabel
+            // difficultyLabel
             // 
-            this.diffLabel.AutoSize = true;
-            this.diffLabel.Font = new System.Drawing.Font("Digital-7 Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diffLabel.ForeColor = System.Drawing.Color.White;
-            this.diffLabel.Location = new System.Drawing.Point(182, 152);
-            this.diffLabel.Name = "diffLabel";
-            this.diffLabel.Size = new System.Drawing.Size(396, 49);
-            this.diffLabel.TabIndex = 0;
-            this.diffLabel.Text = "Select Difficulty";
-            this.diffLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.difficultyLabel.AutoSize = true;
+            this.difficultyLabel.Font = new System.Drawing.Font("Digital-7 Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.difficultyLabel.ForeColor = System.Drawing.Color.White;
+            this.difficultyLabel.Location = new System.Drawing.Point(182, 152);
+            this.difficultyLabel.Name = "difficultyLabel";
+            this.difficultyLabel.Size = new System.Drawing.Size(396, 49);
+            this.difficultyLabel.TabIndex = 0;
+            this.difficultyLabel.Text = "Select Difficulty";
+            this.difficultyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // wordDisplay
             // 
@@ -575,95 +578,79 @@ namespace Hangman
             this.restartBtn.UseVisualStyleBackColor = true;
             this.restartBtn.Click += new System.EventHandler(this.restartBtn_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 333);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(180, 333);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "label2";
-            // 
             // gameoverPanel
             // 
-            this.gameoverPanel.Controls.Add(this.button1);
-            this.gameoverPanel.Controls.Add(this.label3);
-            this.gameoverPanel.Location = new System.Drawing.Point(12, 323);
+            this.gameoverPanel.Controls.Add(this.lossWordWasLabel);
+            this.gameoverPanel.Controls.Add(this.tryAgainBtn);
+            this.gameoverPanel.Controls.Add(this.gameOverLabel);
+            this.gameoverPanel.Location = new System.Drawing.Point(768, 272);
             this.gameoverPanel.Name = "gameoverPanel";
             this.gameoverPanel.Size = new System.Drawing.Size(760, 233);
             this.gameoverPanel.TabIndex = 34;
             this.gameoverPanel.Visible = false;
             // 
-            // button1
+            // tryAgainBtn
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Digital-7 Mono", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(252, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(256, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Try Again?";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.restartBtn_Click);
+            this.tryAgainBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tryAgainBtn.FlatAppearance.BorderSize = 0;
+            this.tryAgainBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tryAgainBtn.Font = new System.Drawing.Font("Digital-7 Mono", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tryAgainBtn.ForeColor = System.Drawing.Color.White;
+            this.tryAgainBtn.Location = new System.Drawing.Point(252, 142);
+            this.tryAgainBtn.Name = "tryAgainBtn";
+            this.tryAgainBtn.Size = new System.Drawing.Size(256, 50);
+            this.tryAgainBtn.TabIndex = 0;
+            this.tryAgainBtn.Text = "Try Again?";
+            this.tryAgainBtn.UseVisualStyleBackColor = true;
+            this.tryAgainBtn.Click += new System.EventHandler(this.restartBtn_Click);
             // 
-            // label3
+            // gameOverLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Digital-7 Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(260, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(241, 49);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Game over!";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameOverLabel.AutoSize = true;
+            this.gameOverLabel.Font = new System.Drawing.Font("Digital-7 Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameOverLabel.ForeColor = System.Drawing.Color.White;
+            this.gameOverLabel.Location = new System.Drawing.Point(260, 41);
+            this.gameOverLabel.Name = "gameOverLabel";
+            this.gameOverLabel.Size = new System.Drawing.Size(241, 49);
+            this.gameOverLabel.TabIndex = 0;
+            this.gameOverLabel.Text = "Game over!";
+            this.gameOverLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // winPanel
             // 
-            this.winPanel.Controls.Add(this.button2);
+            this.winPanel.Controls.Add(this.winWordWasLabel);
+            this.winPanel.Controls.Add(this.playAgainBtn);
             this.winPanel.Controls.Add(this.winLabel);
-            this.winPanel.Location = new System.Drawing.Point(72, 12);
+            this.winPanel.Location = new System.Drawing.Point(768, 33);
             this.winPanel.Name = "winPanel";
             this.winPanel.Size = new System.Drawing.Size(700, 233);
             this.winPanel.TabIndex = 0;
             this.winPanel.Visible = false;
             // 
-            // button2
+            // playAgainBtn
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Digital-7 Mono", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(222, 97);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(256, 50);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Play Again?";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.restartBtn_Click);
+            this.playAgainBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.playAgainBtn.FlatAppearance.BorderSize = 0;
+            this.playAgainBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.playAgainBtn.Font = new System.Drawing.Font("Digital-7 Mono", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playAgainBtn.ForeColor = System.Drawing.Color.White;
+            this.playAgainBtn.Location = new System.Drawing.Point(222, 142);
+            this.playAgainBtn.Name = "playAgainBtn";
+            this.playAgainBtn.Size = new System.Drawing.Size(256, 50);
+            this.playAgainBtn.TabIndex = 0;
+            this.playAgainBtn.Text = "Play Again?";
+            this.playAgainBtn.UseVisualStyleBackColor = true;
+            this.playAgainBtn.Click += new System.EventHandler(this.restartBtn_Click);
             // 
             // winLabel
             // 
             this.winLabel.AutoSize = true;
             this.winLabel.Font = new System.Drawing.Font("Digital-7 Mono", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winLabel.ForeColor = System.Drawing.Color.White;
-            this.winLabel.Location = new System.Drawing.Point(252, 45);
+            this.winLabel.Location = new System.Drawing.Point(252, 41);
             this.winLabel.Name = "winLabel";
             this.winLabel.Size = new System.Drawing.Size(197, 49);
-            this.winLabel.TabIndex = 5;
+            this.winLabel.TabIndex = 0;
             this.winLabel.Text = "You Win!";
             this.winLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -676,6 +663,40 @@ namespace Hangman
             this.pictureBox.TabIndex = 29;
             this.pictureBox.TabStop = false;
             // 
+            // guessesLeftLabel
+            // 
+            this.guessesLeftLabel.AutoSize = true;
+            this.guessesLeftLabel.Font = new System.Drawing.Font("Digital-7 Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guessesLeftLabel.ForeColor = System.Drawing.Color.White;
+            this.guessesLeftLabel.Location = new System.Drawing.Point(12, 532);
+            this.guessesLeftLabel.Name = "guessesLeftLabel";
+            this.guessesLeftLabel.Size = new System.Drawing.Size(144, 20);
+            this.guessesLeftLabel.TabIndex = 6;
+            this.guessesLeftLabel.Text = "guesses left: 8";
+            this.guessesLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lossWordWasLabel
+            // 
+            this.lossWordWasLabel.Font = new System.Drawing.Font("Digital-7 Mono", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lossWordWasLabel.ForeColor = System.Drawing.Color.White;
+            this.lossWordWasLabel.Location = new System.Drawing.Point(73, 90);
+            this.lossWordWasLabel.Name = "lossWordWasLabel";
+            this.lossWordWasLabel.Size = new System.Drawing.Size(614, 49);
+            this.lossWordWasLabel.TabIndex = 0;
+            this.lossWordWasLabel.Text = "The word was \"\"";
+            this.lossWordWasLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // winWordWasLabel
+            // 
+            this.winWordWasLabel.Font = new System.Drawing.Font("Digital-7 Mono", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winWordWasLabel.ForeColor = System.Drawing.Color.White;
+            this.winWordWasLabel.Location = new System.Drawing.Point(43, 90);
+            this.winWordWasLabel.Name = "winWordWasLabel";
+            this.winWordWasLabel.Size = new System.Drawing.Size(614, 49);
+            this.winWordWasLabel.TabIndex = 0;
+            this.winWordWasLabel.Text = "The word was \"\"";
+            this.winWordWasLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Hangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -685,8 +706,6 @@ namespace Hangman
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.winPanel);
             this.Controls.Add(this.gameoverPanel);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.sBtn);
             this.Controls.Add(this.wBtn);
             this.Controls.Add(this.aBtn);
@@ -714,13 +733,15 @@ namespace Hangman
             this.Controls.Add(this.hBtn);
             this.Controls.Add(this.yBtn);
             this.Controls.Add(this.pictureBox);
-            this.Controls.Add(this.wordDisplay);
             this.Controls.Add(this.restartBtn);
+            this.Controls.Add(this.guessesLeftLabel);
+            this.Controls.Add(this.wordDisplay);
             this.KeyPreview = true;
             this.MaximumSize = new System.Drawing.Size(800, 600);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Hangman";
             this.Text = "Hangman";
+            this.Load += new System.EventHandler(this.Hangman_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Hangman_KeyPress);
             this.menuPanel.ResumeLayout(false);
             this.menuPanel.PerformLayout();
@@ -764,20 +785,21 @@ namespace Hangman
         public System.Windows.Forms.Button qBtn;
         private System.Windows.Forms.Panel menuPanel;
         private System.Windows.Forms.Button easyBtn;
-        private System.Windows.Forms.Label diffLabel;
+        private System.Windows.Forms.Label difficultyLabel;
         private System.Windows.Forms.Button hardBtn;
         private System.Windows.Forms.Button medBtn;
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Label wordDisplay;
         public System.Windows.Forms.Button restartBtn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel gameoverPanel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button tryAgainBtn;
+        private System.Windows.Forms.Label gameOverLabel;
         private System.Windows.Forms.Panel winPanel;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button playAgainBtn;
         private System.Windows.Forms.Label winLabel;
+        private System.Windows.Forms.Label guessesLeftLabel;
+        private System.Windows.Forms.Label lossWordWasLabel;
+        private System.Windows.Forms.Label winWordWasLabel;
     }
 }
 

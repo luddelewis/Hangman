@@ -40,13 +40,14 @@ namespace Hangman
                 ctrl.Font = new Font(pfc.Families[0], ctrl.Font.Size, FontStyle.Regular);
             }
             //Loops throgh panels and their controls and changes font since this.controls does not include controls in panels
-            foreach(Panel panel in this.Controls)
+            foreach(Panel panel in Controls.OfType<Panel>())
             {
                 foreach(Control ctrl in panel.Controls)
                 {
                     ctrl.Font = new Font(pfc.Families[0], ctrl.Font.Size, FontStyle.Regular);
                 }
             }
+
         }
         private void difficultyBtn_Click(object sender, EventArgs e)
         {

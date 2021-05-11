@@ -30,6 +30,25 @@ namespace Hangman
             winPanel.Location = new Point(12, 323);
             menuPanel.Location = new Point(15, 12);
             gameoverPanel.Location = new Point(12, 323);
+            //Custom font
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile("../../digital-7 (mono).ttf");
+            foreach(Control c in this.Controls)
+            {
+                c.Font = new Font(pfc.Families[0],c.Font.Size,FontStyle.Regular);
+            }
+            foreach(Control c in winPanel.Controls)
+            {
+                c.Font = new Font(pfc.Families[0], c.Font.Size, FontStyle.Regular);
+            }
+            foreach (Control c in gameoverPanel.Controls)
+            {
+                c.Font = new Font(pfc.Families[0], c.Font.Size, FontStyle.Regular);
+            }
+            foreach (Control c in menuPanel.Controls)
+            {
+                c.Font = new Font(pfc.Families[0], c.Font.Size, FontStyle.Regular);
+            }
         }
         private void difficultyBtn_Click(object sender, EventArgs e)
         {

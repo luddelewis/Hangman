@@ -67,7 +67,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="digital-7 %28mono%29.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,11 +108,7 @@
     <None Include="Resources\8.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\digital-7 %28mono%29.ttf" />
     <None Include="Resources\Win.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Digital-7 Mono Normal Font.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -57,6 +57,8 @@ namespace Hangman
         }
         private void restartBtn_Click(object sender, EventArgs e)
         {
+            //Resets the font if it changes for some obscure reason
+            Hangman_Load(sender, null);
             //resets the game
             menuPanel.Show();
             gameoverPanel.Hide();

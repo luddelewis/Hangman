@@ -116,11 +116,17 @@ namespace Hangman
         //Function for checking the guesses
         private void GuessChecker(char guessedLetter)
         {
+            bool alreadyGuessed = false;
             //Hides the guessed letter by checking if the letter matches the text on any of the buttons
             foreach (var button in this.Controls.OfType<Button>())
             {
                 if (button.Text == guessedLetter.ToString())
                 {
+                    //If the button is already hidden set alreadyGuessed to true
+                    if(button.Visible == false)
+                    {
+                        alreadyGuessed = true;
+                    }
                     button.Hide();
                 }
             }
@@ -145,7 +151,7 @@ namespace Hangman
                     Win();
                 }
             }
-            else
+            else if(!alreadyGuessed)
             {
                 WrongGuess();
             }

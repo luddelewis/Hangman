@@ -154,7 +154,10 @@ namespace Hangman
 
         private void WrongGuess()
         {
-            guessesLeft--;
+            if(guessesLeft > 0)
+            {
+                guessesLeft--;
+            }
             //Updates guessesLeftLabel
             guessesLeftLabel.Text=$"Guesses left: {guessesLeft}";
             //Gets the resource corresponding to the amount of guesses left

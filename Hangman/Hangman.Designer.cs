@@ -73,6 +73,7 @@ namespace Hangman
             this.winLabel = new System.Windows.Forms.Label();
             this.guessesLeftLabel = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.hiddenBtn = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             this.gameoverPanel.SuspendLayout();
             this.winPanel.SuspendLayout();
@@ -90,6 +91,7 @@ namespace Hangman
             this.yBtn.Name = "yBtn";
             this.yBtn.Size = new System.Drawing.Size(50, 50);
             this.yBtn.TabIndex = 0;
+            this.yBtn.TabStop = false;
             this.yBtn.Text = "Y";
             this.yBtn.UseVisualStyleBackColor = true;
             this.yBtn.Click += new System.EventHandler(this.LetterClick);
@@ -105,6 +107,7 @@ namespace Hangman
             this.hBtn.Name = "hBtn";
             this.hBtn.Size = new System.Drawing.Size(50, 50);
             this.hBtn.TabIndex = 0;
+            this.hBtn.TabStop = false;
             this.hBtn.Text = "H";
             this.hBtn.UseVisualStyleBackColor = true;
             this.hBtn.Click += new System.EventHandler(this.LetterClick);
@@ -120,6 +123,7 @@ namespace Hangman
             this.vBtn.Name = "vBtn";
             this.vBtn.Size = new System.Drawing.Size(50, 50);
             this.vBtn.TabIndex = 0;
+            this.vBtn.TabStop = false;
             this.vBtn.Text = "V";
             this.vBtn.UseVisualStyleBackColor = true;
             this.vBtn.Click += new System.EventHandler(this.LetterClick);
@@ -135,6 +139,7 @@ namespace Hangman
             this.bBtn.Name = "bBtn";
             this.bBtn.Size = new System.Drawing.Size(50, 50);
             this.bBtn.TabIndex = 0;
+            this.bBtn.TabStop = false;
             this.bBtn.Text = "B";
             this.bBtn.UseVisualStyleBackColor = true;
             this.bBtn.Click += new System.EventHandler(this.LetterClick);
@@ -150,6 +155,7 @@ namespace Hangman
             this.jBtn.Name = "jBtn";
             this.jBtn.Size = new System.Drawing.Size(50, 50);
             this.jBtn.TabIndex = 0;
+            this.jBtn.TabStop = false;
             this.jBtn.Text = "J";
             this.jBtn.UseVisualStyleBackColor = true;
             this.jBtn.Click += new System.EventHandler(this.LetterClick);
@@ -165,6 +171,7 @@ namespace Hangman
             this.uBtn.Name = "uBtn";
             this.uBtn.Size = new System.Drawing.Size(50, 50);
             this.uBtn.TabIndex = 0;
+            this.uBtn.TabStop = false;
             this.uBtn.Text = "U";
             this.uBtn.UseVisualStyleBackColor = true;
             this.uBtn.Click += new System.EventHandler(this.LetterClick);
@@ -180,6 +187,7 @@ namespace Hangman
             this.nBtn.Name = "nBtn";
             this.nBtn.Size = new System.Drawing.Size(50, 50);
             this.nBtn.TabIndex = 0;
+            this.nBtn.TabStop = false;
             this.nBtn.Text = "N";
             this.nBtn.UseVisualStyleBackColor = true;
             this.nBtn.Click += new System.EventHandler(this.LetterClick);
@@ -195,6 +203,7 @@ namespace Hangman
             this.kBtn.Name = "kBtn";
             this.kBtn.Size = new System.Drawing.Size(50, 50);
             this.kBtn.TabIndex = 0;
+            this.kBtn.TabStop = false;
             this.kBtn.Text = "K";
             this.kBtn.UseVisualStyleBackColor = true;
             this.kBtn.Click += new System.EventHandler(this.LetterClick);
@@ -210,6 +219,7 @@ namespace Hangman
             this.iBtn.Name = "iBtn";
             this.iBtn.Size = new System.Drawing.Size(50, 50);
             this.iBtn.TabIndex = 0;
+            this.iBtn.TabStop = false;
             this.iBtn.Text = "I";
             this.iBtn.UseVisualStyleBackColor = true;
             this.iBtn.Click += new System.EventHandler(this.LetterClick);
@@ -225,6 +235,7 @@ namespace Hangman
             this.mBtn.Name = "mBtn";
             this.mBtn.Size = new System.Drawing.Size(50, 50);
             this.mBtn.TabIndex = 0;
+            this.mBtn.TabStop = false;
             this.mBtn.Text = "M";
             this.mBtn.UseVisualStyleBackColor = true;
             this.mBtn.Click += new System.EventHandler(this.LetterClick);
@@ -240,6 +251,7 @@ namespace Hangman
             this.lBtn.Name = "lBtn";
             this.lBtn.Size = new System.Drawing.Size(50, 50);
             this.lBtn.TabIndex = 0;
+            this.lBtn.TabStop = false;
             this.lBtn.Text = "L";
             this.lBtn.UseVisualStyleBackColor = true;
             this.lBtn.Click += new System.EventHandler(this.LetterClick);
@@ -255,6 +267,7 @@ namespace Hangman
             this.oBtn.Name = "oBtn";
             this.oBtn.Size = new System.Drawing.Size(50, 50);
             this.oBtn.TabIndex = 0;
+            this.oBtn.TabStop = false;
             this.oBtn.Text = "O";
             this.oBtn.UseVisualStyleBackColor = true;
             this.oBtn.Click += new System.EventHandler(this.LetterClick);
@@ -270,6 +283,7 @@ namespace Hangman
             this.cBtn.Name = "cBtn";
             this.cBtn.Size = new System.Drawing.Size(50, 50);
             this.cBtn.TabIndex = 0;
+            this.cBtn.TabStop = false;
             this.cBtn.Text = "C";
             this.cBtn.UseVisualStyleBackColor = true;
             this.cBtn.Click += new System.EventHandler(this.LetterClick);
@@ -285,6 +299,7 @@ namespace Hangman
             this.gBtn.Name = "gBtn";
             this.gBtn.Size = new System.Drawing.Size(50, 50);
             this.gBtn.TabIndex = 0;
+            this.gBtn.TabStop = false;
             this.gBtn.Text = "G";
             this.gBtn.UseVisualStyleBackColor = true;
             this.gBtn.Click += new System.EventHandler(this.LetterClick);
@@ -300,6 +315,7 @@ namespace Hangman
             this.tBtn.Name = "tBtn";
             this.tBtn.Size = new System.Drawing.Size(50, 50);
             this.tBtn.TabIndex = 0;
+            this.tBtn.TabStop = false;
             this.tBtn.Text = "T";
             this.tBtn.UseVisualStyleBackColor = true;
             this.tBtn.Click += new System.EventHandler(this.LetterClick);
@@ -315,6 +331,7 @@ namespace Hangman
             this.xBtn.Name = "xBtn";
             this.xBtn.Size = new System.Drawing.Size(50, 50);
             this.xBtn.TabIndex = 0;
+            this.xBtn.TabStop = false;
             this.xBtn.Text = "X";
             this.xBtn.UseVisualStyleBackColor = true;
             this.xBtn.Click += new System.EventHandler(this.LetterClick);
@@ -330,6 +347,7 @@ namespace Hangman
             this.fBtn.Name = "fBtn";
             this.fBtn.Size = new System.Drawing.Size(50, 50);
             this.fBtn.TabIndex = 0;
+            this.fBtn.TabStop = false;
             this.fBtn.Text = "F";
             this.fBtn.UseVisualStyleBackColor = true;
             this.fBtn.Click += new System.EventHandler(this.LetterClick);
@@ -345,6 +363,7 @@ namespace Hangman
             this.rBtn.Name = "rBtn";
             this.rBtn.Size = new System.Drawing.Size(50, 50);
             this.rBtn.TabIndex = 0;
+            this.rBtn.TabStop = false;
             this.rBtn.Text = "R";
             this.rBtn.UseVisualStyleBackColor = true;
             this.rBtn.Click += new System.EventHandler(this.LetterClick);
@@ -360,6 +379,7 @@ namespace Hangman
             this.zBtn.Name = "zBtn";
             this.zBtn.Size = new System.Drawing.Size(50, 50);
             this.zBtn.TabIndex = 0;
+            this.zBtn.TabStop = false;
             this.zBtn.Text = "Z";
             this.zBtn.UseVisualStyleBackColor = true;
             this.zBtn.Click += new System.EventHandler(this.LetterClick);
@@ -375,6 +395,7 @@ namespace Hangman
             this.dBtn.Name = "dBtn";
             this.dBtn.Size = new System.Drawing.Size(50, 50);
             this.dBtn.TabIndex = 0;
+            this.dBtn.TabStop = false;
             this.dBtn.Text = "D";
             this.dBtn.UseVisualStyleBackColor = true;
             this.dBtn.Click += new System.EventHandler(this.LetterClick);
@@ -390,6 +411,7 @@ namespace Hangman
             this.eBtn.Name = "eBtn";
             this.eBtn.Size = new System.Drawing.Size(50, 50);
             this.eBtn.TabIndex = 0;
+            this.eBtn.TabStop = false;
             this.eBtn.Text = "E";
             this.eBtn.UseVisualStyleBackColor = true;
             this.eBtn.Click += new System.EventHandler(this.LetterClick);
@@ -405,6 +427,7 @@ namespace Hangman
             this.pBtn.Name = "pBtn";
             this.pBtn.Size = new System.Drawing.Size(50, 50);
             this.pBtn.TabIndex = 0;
+            this.pBtn.TabStop = false;
             this.pBtn.Text = "P";
             this.pBtn.UseVisualStyleBackColor = true;
             this.pBtn.Click += new System.EventHandler(this.LetterClick);
@@ -420,6 +443,7 @@ namespace Hangman
             this.sBtn.Name = "sBtn";
             this.sBtn.Size = new System.Drawing.Size(50, 50);
             this.sBtn.TabIndex = 0;
+            this.sBtn.TabStop = false;
             this.sBtn.Text = "S";
             this.sBtn.UseVisualStyleBackColor = true;
             this.sBtn.Click += new System.EventHandler(this.LetterClick);
@@ -435,6 +459,7 @@ namespace Hangman
             this.wBtn.Name = "wBtn";
             this.wBtn.Size = new System.Drawing.Size(50, 50);
             this.wBtn.TabIndex = 0;
+            this.wBtn.TabStop = false;
             this.wBtn.Text = "W";
             this.wBtn.UseVisualStyleBackColor = true;
             this.wBtn.Click += new System.EventHandler(this.LetterClick);
@@ -450,6 +475,7 @@ namespace Hangman
             this.aBtn.Name = "aBtn";
             this.aBtn.Size = new System.Drawing.Size(50, 50);
             this.aBtn.TabIndex = 0;
+            this.aBtn.TabStop = false;
             this.aBtn.Text = "A";
             this.aBtn.UseVisualStyleBackColor = true;
             this.aBtn.Click += new System.EventHandler(this.LetterClick);
@@ -465,6 +491,7 @@ namespace Hangman
             this.qBtn.Name = "qBtn";
             this.qBtn.Size = new System.Drawing.Size(50, 50);
             this.qBtn.TabIndex = 0;
+            this.qBtn.TabStop = false;
             this.qBtn.Text = "Q";
             this.qBtn.UseVisualStyleBackColor = true;
             this.qBtn.Click += new System.EventHandler(this.LetterClick);
@@ -504,6 +531,7 @@ namespace Hangman
             this.hardBtn.Name = "hardBtn";
             this.hardBtn.Size = new System.Drawing.Size(150, 50);
             this.hardBtn.TabIndex = 0;
+            this.hardBtn.TabStop = false;
             this.hardBtn.Text = "Hard";
             this.hardBtn.UseVisualStyleBackColor = true;
             this.hardBtn.Click += new System.EventHandler(this.difficultyBtn_Click);
@@ -573,6 +601,7 @@ namespace Hangman
             this.restartBtn.Name = "restartBtn";
             this.restartBtn.Size = new System.Drawing.Size(50, 50);
             this.restartBtn.TabIndex = 0;
+            this.restartBtn.TabStop = false;
             this.restartBtn.Text = "↺";
             this.restartBtn.UseVisualStyleBackColor = true;
             this.restartBtn.Click += new System.EventHandler(this.restartBtn_Click);
@@ -592,7 +621,7 @@ namespace Hangman
             // 
             this.lossWordWasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lossWordWasLabel.ForeColor = System.Drawing.Color.White;
-            this.lossWordWasLabel.Location = new System.Drawing.Point(73, 90);
+            this.lossWordWasLabel.Location = new System.Drawing.Point(73, 96);
             this.lossWordWasLabel.Name = "lossWordWasLabel";
             this.lossWordWasLabel.Size = new System.Drawing.Size(614, 49);
             this.lossWordWasLabel.TabIndex = 0;
@@ -610,6 +639,7 @@ namespace Hangman
             this.tryAgainBtn.Name = "tryAgainBtn";
             this.tryAgainBtn.Size = new System.Drawing.Size(256, 50);
             this.tryAgainBtn.TabIndex = 0;
+            this.tryAgainBtn.TabStop = false;
             this.tryAgainBtn.Text = "Try Again?";
             this.tryAgainBtn.UseVisualStyleBackColor = true;
             this.tryAgainBtn.Click += new System.EventHandler(this.restartBtn_Click);
@@ -631,7 +661,7 @@ namespace Hangman
             this.winPanel.Controls.Add(this.winWordWasLabel);
             this.winPanel.Controls.Add(this.playAgainBtn);
             this.winPanel.Controls.Add(this.winLabel);
-            this.winPanel.Location = new System.Drawing.Point(768, 33);
+            this.winPanel.Location = new System.Drawing.Point(765, 33);
             this.winPanel.Name = "winPanel";
             this.winPanel.Size = new System.Drawing.Size(760, 233);
             this.winPanel.TabIndex = 0;
@@ -659,6 +689,7 @@ namespace Hangman
             this.playAgainBtn.Name = "playAgainBtn";
             this.playAgainBtn.Size = new System.Drawing.Size(256, 50);
             this.playAgainBtn.TabIndex = 0;
+            this.playAgainBtn.TabStop = false;
             this.playAgainBtn.Text = "Play Again?";
             this.playAgainBtn.UseVisualStyleBackColor = true;
             this.playAgainBtn.Click += new System.EventHandler(this.restartBtn_Click);
@@ -696,12 +727,26 @@ namespace Hangman
             this.pictureBox.TabIndex = 29;
             this.pictureBox.TabStop = false;
             // 
+            // hiddenBtn
+            // 
+            this.hiddenBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            this.hiddenBtn.FlatAppearance.BorderSize = 0;
+            this.hiddenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hiddenBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hiddenBtn.ForeColor = System.Drawing.Color.White;
+            this.hiddenBtn.Location = new System.Drawing.Point(784, -23);
+            this.hiddenBtn.Name = "hiddenBtn";
+            this.hiddenBtn.Size = new System.Drawing.Size(31, 50);
+            this.hiddenBtn.TabIndex = 36;
+            this.hiddenBtn.UseVisualStyleBackColor = true;
+            // 
             // Hangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(780, 549);
+            this.Controls.Add(this.hiddenBtn);
             this.Controls.Add(this.menuPanel);
             this.Controls.Add(this.winPanel);
             this.Controls.Add(this.gameoverPanel);
@@ -801,6 +846,7 @@ namespace Hangman
         private System.Windows.Forms.Label guessesLeftLabel;
         private System.Windows.Forms.Label lossWordWasLabel;
         private System.Windows.Forms.Label winWordWasLabel;
+        public System.Windows.Forms.Button hiddenBtn;
     }
 }
 

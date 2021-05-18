@@ -52,6 +52,7 @@ namespace Hangman
         private void difficultyBtn_Click(object sender, EventArgs e)
         {
             difficulty = ((Button)sender).Text.ToLower();
+            menuPanel.Enabled = false;
             menuPanel.Hide();
             Startup();
         }
@@ -60,6 +61,7 @@ namespace Hangman
             //Resets the font if it changes for some obscure reason
             Hangman_Load(sender, null);
             //resets the game
+            menuPanel.Enabled = true;
             menuPanel.Show();
             gameoverPanel.Hide();
             winPanel.Hide();
